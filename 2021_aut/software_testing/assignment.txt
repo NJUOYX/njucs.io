@@ -1,0 +1,61 @@
+﻿181860025,贡辰,有限状态机测试 FSM Testing
+181860031,胡欣然,压力测试 Stress Testing
+181860061,陆逸麟,配置测试 Configuration Testing
+181860065,马庆贺,自适应随机测试 Adaptive Random Testing
+181860068,欧阳欣,变异测试 Mutation Testing
+181860072,彭建涛,有限状态机测试 FSM Testing
+181860078,沈思妍,可用性测试 Usability Testing
+181860083,苏芷青,性能测试 Performance Testing
+181860094,王佳奕,变异测试 Mutation Testing
+181860096,王锦国,蜕变测试 Metamorphic Testing
+181860105,王越洋,基于搜索的测试 Search Based Software Testing
+181860133,张晨阳,兼容性测试 Compatibility Testing
+181860139,张旭,组合测试 Combinatorial Testing
+181860151,周清远,有限状态机测试 FSM Testing
+181860156,朱胤达,可用性测试 Usability Testing
+181870286,钟家成,配置测试 Configuration Testing
+191180133,王一鸣,模糊测试 Fuzzing
+191220001,毕一帆,组合测试 Combinatorial Testing
+191220002,蔡鸿彬,故障注入测试 Fault Injection Testing
+191220003,曹安毅,安全性测试 Security Testing
+191220028,冯梓豪,导向性随机测试 Concolic Testing
+191220034,郭怡宁,故障注入测试 Fault Injection Testing
+191220040,贾一凡,兼容性测试 Compatibility Testing
+191220042,蒋梓栩,图形用户界面测试 GUI Testing
+191220046,赖烨文,故障注入测试 Fault Injection Testing
+191220048,李广源,图形用户界面测试 GUI Testing
+191220062,刘东旭,压力测试 Stress Testing
+191220068,刘天舒,组合测试 Combinatorial Testing
+191220069,刘岩菘,配置测试 Configuration Testing
+191220070,刘永鹏,自适应随机测试 Adaptive Random Testing
+191220078,马润,配置测试 Configuration Testing
+191220080,马英硕,压力测试 Stress Testing
+191220081,毛彦杰,导向性随机测试 Concolic Testing
+191220088,秦嘉余,导向性随机测试 Concolic Testing
+191220091,沈童菲,故障注入测试 Fault Injection Testing
+191220092,沈逸飞,随机测试 Random Testing
+191220094,施涵格,可访问性测试 Accessibility Testing
+191220101,孙思敏,模糊测试 Fuzzing
+191220102,孙文戈,随机测试 Random Testing
+191220106,汤博文,自适应随机测试 Adaptive Random Testing
+191220108,王靖灵,蜕变测试 Metamorphic Testing
+191220110,王珺珧,有限状态机测试 FSM Testing
+191220116,王璇,变异测试 Mutation Testing
+191220120,翁锦帅,基于搜索的测试 Search Based Software Testing
+191220121,吴光远,变异测试 Mutation Testing
+191220128,谢治民,性能测试 Performance Testing
+191220133,徐思源,蜕变测试 Metamorphic Testing
+191220136,许汤智,可访问性测试 Accessibility Testing
+191220137,严思远,性能测试 Performance Testing
+191220138,杨飞洋,随机测试 Random Testing
+191220139,杨士宇,可访问性测试 Accessibility Testing
+191220142,叶起厚,兼容性测试 Compatibility Testing
+191220167,张馨予,蜕变测试 Metamorphic Testing
+191220171,张宇晨,模糊测试 Fuzzing
+191220172,张长昊,导向性随机测试 Concolic Testing
+191220181,朱恩伯,安全性测试 Security Testing
+191220183,朱恒阳,组合测试 Combinatorial Testing
+191220185,朱嘉琦,可访问性测试 Accessibility Testing
+191840104,黄盛,兼容性测试 Compatibility Testing
+191850139,马川腾,安全性测试 Security Testing
+191870191,王天翼,安全性测试 Security Testing
