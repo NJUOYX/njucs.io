@@ -14,4 +14,4 @@ date: 2021-10-12 21:55:00 +0800
 
 ## 报告
 
-*[开题报告](resources/pre1/pre1.html)
+* [开题报告](resources/pre1/pre1.html)
