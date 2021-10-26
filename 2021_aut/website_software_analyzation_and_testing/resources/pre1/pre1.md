@@ -48,7 +48,7 @@ presentation:
 
 ## 研究内容
 1. HTML语法解析技术
-2. DOM数生成技术
+2. DOM树生成技术
 <!-- slide vertical=true -->
 
 ## 研究路径
