@@ -20,4 +20,4 @@ date: 2021-10-12 16:58:00 +0800
 * [分配名单](https://box.nju.edu.cn/lib/05a4dbb4-3437-471d-becb-e41dc4a8c61f/file/2021_aut/software_testing/assignment.txt)
 
 
-[report](report/export/index.html)
+[report](report/index.html)

@@ -14,8 +14,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="http://localhost:65134/libs/reveal.js/4.1.3/reset.css">
-	<link rel="stylesheet" href="http://localhost:65134/libs/reveal.js/4.1.3/reveal.css">
+	<link rel="stylesheet" href="http://localhost:59161/libs/reveal.js/4.1.3/reset.css">
+	<link rel="stylesheet" href="http://localhost:59161/libs/reveal.js/4.1.3/reveal.css">
 
 	
 	
@@ -23,23 +23,23 @@
 
 	  <!-- highlight Theme -->
   	
-	  <link rel="stylesheet" href="http://localhost:65134/libs/highlight.js/11.3.1/styles/monokai.min.css">
+	  <link rel="stylesheet" href="http://localhost:59161/libs/highlight.js/11.3.1/styles/monokai.min.css">
 	
 	
 		
-	<link rel="stylesheet" href="http://localhost:65134/libs/reveal.js/4.1.3/plugin/chalkboard/style.css">
+	<link rel="stylesheet" href="http://localhost:59161/libs/reveal.js/4.1.3/plugin/chalkboard/style.css">
 	
 	
 	
-		<link rel="stylesheet" href="http://localhost:65134/libs/reveal.js/4.1.3/plugin/customcontrols/style.css">
+		<link rel="stylesheet" href="http://localhost:59161/libs/reveal.js/4.1.3/plugin/customcontrols/style.css">
 	
-	<link rel="stylesheet" href="http://localhost:65134/libs/styles/tasklist.css">
+	<link rel="stylesheet" href="http://localhost:59161/libs/styles/tasklist.css">
 
 
 
   <!-- Revealjs Theme -->
   
-  	<link rel="stylesheet" href="http://localhost:65134/libs/reveal.js/4.1.3/theme/black.css" id="theme">
+  	<link rel="stylesheet" href="http://localhost:59161/libs/reveal.js/4.1.3/theme/black.css" id="theme">
   
   
 
@@ -213,27 +213,23 @@ PIT provides 4 alternative groups of mutators
 <section>
 <h2>Better Testing strategy</h2>
 <ul>
-<li>Start from a weaker pseudo-tested methods.</li>
+<li>Start from finding <strong>strong pseudo-tested</strong> methods.</li>
 </ul>
 </section>
 <section>
-<ol>
-<li>weak pseudo-tested methods: the tests passes with at least one modified value. Not as bad as strong pseudo-tested but you may want still want to check it out.</li>
-</ol>
+<h3>1. strong pseudo-tested methods:</h3>
+<p>No matter the return values of a method, the tests still passes.(easy)</p>
 </section>
 <section>
-<ol start="2">
-<li>strong pseudo-tested methods: no matter the return values of a method, the tests still passes. This is the worst offender since it means the tests really needs to be improved. This was the case in the example above.</li>
-</ol>
+<h3>2. weak pseudo-tested methods:</h3>
+<p>The tests passes with at least one modified value.(hard)</p>
 </section>
 <section>
-<ol start="3">
-<li>fully tested methods: the tests fail for all mutations and thus can be considered rock-solid!</li>
-</ol>
+<h3>3. fully tested methods:</h3>
+<p>The tests fail for all mutations and thus can be considered rock-solid!(almost impossible)</p>
 </section>
 <section>
-<h2>A Weak Test:</h2>
-<h3>Extreme Mutation Testing</h3>
+<h2>Extreme Mutation Testing</h2>
 <ul>
 <li>In Extreme Mutation testing, the whole logic of a method under test is eliminated.</li>
 </ul>
@@ -348,15 +344,14 @@ PIT provides 4 alternative groups of mutators
 </code></pre>
 </section>
 <section>
-<h2>A Weak Test</h2>
-<p><a href="analyze/descartes-all/index.html">pitest-descartes</a></p>
+<h2>descartes test</h2>
+<p><a href="https://github.com/NJUOYX/njucs.io/tree/gh-pages/2021_aut/software_testing/report/analyze/descartes-all/index.html">pitest-descartes</a></p>
+<img data-src="imgs/desc.png">
 </section>
 <section>
-<h2>A Stronger Test</h2>
-<p><a href="">pitest-default</a></p>
-</section>
-<section>
-<h2>compare</h2>
+<h2>default test</h2>
+<p><a href="https://github.com/NJUOYX/njucs.io/tree/gh-pages/2021_aut/software_testing/report/analyze/default/index.html">pitest-default</a></p>
+<img data-src="imgs/default.png">
 </section>
 <section>
 <h2>THANKS!</h2>
@@ -371,32 +366,32 @@ PIT provides 4 alternative groups of mutators
   </div>
 
   	
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/reveal.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/zoom/zoom.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/notes/notes.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/search/search.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/markdown/markdown.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/highlight/highlight.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/menu/menu.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/math/math.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/reveal.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/zoom/zoom.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/notes/notes.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/search/search.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/markdown/markdown.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/highlight/highlight.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/menu/menu.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/math/math.js"></script>
 
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/fullscreen/plugin.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/fullscreen/plugin.js"></script>
   
-  	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/animate/plugin.js"></script>
-  	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/animate/svg.min.js"></script>
+  	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/animate/plugin.js"></script>
+  	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/animate/svg.min.js"></script>
   
-  	 <!--	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/anything/plugin.js"></script> -->
+  	 <!--	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/anything/plugin.js"></script> -->
 
- <!--	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/audio-slideshow/plugin.js"></script>  -->
-<!--	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/audio-slideshow/recorder.js"></script>-->
-<!--	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/audio-slideshow/RecordRTC.js"></script>-->
+ <!--	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/audio-slideshow/RecordRTC.js"></script>-->
 
-<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/chalkboard/plugin.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/customcontrols/plugin.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/embed-tweet/plugin.js"></script>
+<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/chalkboard/plugin.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/customcontrols/plugin.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/embed-tweet/plugin.js"></script>
 
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/chart/chart.min.js"></script>
-	<script src="http://localhost:65134/libs/reveal.js/4.1.3/plugin/chart/plugin.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/chart/chart.min.js"></script>
+	<script src="http://localhost:59161/libs/reveal.js/4.1.3/plugin/chart/plugin.js"></script>
 
   <script>
 

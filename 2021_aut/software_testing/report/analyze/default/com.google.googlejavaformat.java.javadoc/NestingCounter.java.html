@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>NestingCounter.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/*</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Copyright 2016 Google Inc.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Licensed under the Apache License, Version 2.0 (the &#34;License&#34;); you may not use this file except</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * in compliance with the License. You may obtain a copy of the License at</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *     http://www.apache.org/licenses/LICENSE-2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Unless required by applicable law or agreed to in writing, software distributed under the License</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * or implied. See the License for the specific language governing permissions and limitations under</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.google.googlejavaformat.java.javadoc;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/** Mutable integer for tracking the level of nesting. */</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>final class NestingCounter {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private int value;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  int value() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_22'/>
+22
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_22'>1</a>
+<span>
+
+1. value : replaced int return with 0 for com/google/googlejavaformat/java/javadoc/NestingCounter::value &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return value;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  void increment() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_26'/>
+26
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_26'>1</a>
+<span>
+
+1. increment : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    value++;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  void incrementIfPositive() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_30'/>
+30
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_30'>2</a>
+<span>
+
+1. incrementIfPositive : changed conditional boundary &rarr; KILLED<br/>
+
+2. incrementIfPositive : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (value &#62; 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_31'/>
+31
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_31'>1</a>
+<span>
+
+1. incrementIfPositive : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      value++;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  void decrementIfPositive() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_36'>2</a>
+<span>
+
+1. decrementIfPositive : changed conditional boundary &rarr; KILLED<br/>
+
+2. decrementIfPositive : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (value &#62; 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_37'/>
+37
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_37'>1</a>
+<span>
+
+1. decrementIfPositive : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      value--;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  boolean isPositive() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_42'>3</a>
+<span>
+
+1. isPositive : changed conditional boundary &rarr; KILLED<br/>
+
+2. isPositive : negated conditional &rarr; KILLED<br/>
+
+3. isPositive : replaced boolean return with true for com/google/googlejavaformat/java/javadoc/NestingCounter::isPositive &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return value &#62; 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  void reset() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    value = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6d847838_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_22'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>value<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.closeInnerListStillNewline(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> replaced int return with 0 for com/google/googlejavaformat/java/javadoc/NestingCounter::value &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_26'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>increment<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.htmlTagsInCode(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_30'>30</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_30'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>incrementIfPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.loneBraceDoesNotStartInlineTag(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>incrementIfPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.loneBraceDoesNotStartInlineTag(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_31'>31</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_31'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>incrementIfPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[89: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>decrementIfPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[92: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>decrementIfPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.trailingLink(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_37'>37</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_37'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>decrementIfPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.trailingLink(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6d847838_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6d847838_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isPositive<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> replaced boolean return with true for com/google/googlejavaformat/java/javadoc/NestingCounter::isPositive &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[83: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unicodeCharacterCountArguableBug(com.google.googlejavaformat.java.JavadocFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[92: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[65: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.blankLinesImportComment(com.google.googlejavaformat.java.FormatterTest) (7 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[142: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.lists(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[90: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.quotedTextSplitAcrossLinks(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[154: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[120: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[142: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javaCodeInPre(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinedTokens(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[92: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.brSpaceBug(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[138: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.brAtSignBug(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[156: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[83: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.blockquote(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[128: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.noAsterisk(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[139: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[117: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[109: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[90: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unclosedList(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[115: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[140: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[65: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.tooLong(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paramsOtherIndents(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.standardizeTags(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javadocCanEndAnywhere(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[142: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[131: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.loneBraceDoesNotStartInlineTag(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[89: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.listItemWrap(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.blankLineBeforeParams(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[92: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[83: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[114: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[115: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinLines(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[154: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.removeInitialParagraphTag(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeCommentEndOnly(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[95: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.xhtmlParagraphTag(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paragraphTag(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[120: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[91: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[157: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[142: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[115: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[71: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[140: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[151: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[95: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[93: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (44 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[143: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[153: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.u2028LineSeparator(com.google.googlejavaformat.java.JavadocFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.commentBeforeBadConstructor[2](com.google.googlejavaformat.java.PartialFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[89: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (246 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[109: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[143: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[140: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[135: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[139: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[102: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[128: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.trailingLink(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.preMostlyUntouched(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[153: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[144: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[109: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[135: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[97: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[65: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[90: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (43 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[131: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (165 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.heading(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[117: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.MainTest.javadoc(com.google.googlejavaformat.java.MainTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[147: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[115: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[71: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.oneLinerWouldBe101(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[97: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unicodeEscapesNotReplaced(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[117: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[154: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[89: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.listItemSpaces(com.google.googlejavaformat.java.JavadocFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[155: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.codeInCode(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[114: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.SnippetFormatterTest.compilationWithComments(com.google.googlejavaformat.java.SnippetFormatterTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[93: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.oneLinerIs100(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.commentMostlyUntouched(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeComments(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[138: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[0](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javadocSentenceFragment(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[153: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[151: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[112: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (77 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeCommentBeginOnlyInMiddleOfDoc(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[102: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[138: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[91: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (43 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[2](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[144: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.simple(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[151: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paramsContinuationIndented(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[143: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[155: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinedMultipleAtSign(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[95: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[93: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeCommentBeginOnlyAtEndOfDoc(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[140: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[112: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[71: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.removeCloseTags(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[144: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[93: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.SnippetFormatterTest.compilation(com.google.googlejavaformat.java.SnippetFormatterTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[137: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.windowsLineSeparator(com.google.googlejavaformat.java.JavadocFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[112: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[157: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[151: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[91: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.multilineWrap(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[120: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[137: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[153: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[137: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[147: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (45 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[135: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[109: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.preNotWrapped(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[155: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[2](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.preCodeExample(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.htmlTagsInCode(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[120: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[139: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.tableMostlyUntouched(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.docCommentTrailingBlank(com.google.googlejavaformat.java.FormatterTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[102: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[89: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.commentBeforeBadConstructor[0](com.google.googlejavaformat.java.PartialFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[128: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.closeInnerListStillNewline(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.commentBeforeBadConstructor[1](com.google.googlejavaformat.java.PartialFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.lists2(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[154: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[92: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[157: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[97: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[97: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[139: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unicodeEscapesNotInterpretedBug(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.inferParagraphTags(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[102: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (70 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[143: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.br(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[156: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paragraphTagNewlines(com.google.googlejavaformat.java.JavadocFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[114: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[147: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[131: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[91: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[156: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[155: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[156: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinedAtSign(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[112: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[128: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[144: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[157: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.links(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[83: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[65: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[147: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[131: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (65 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.significantAsterisks(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[114: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[90: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (49 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[95: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javadocFullSentences(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[135: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[117: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (77 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[71: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (48 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[138: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (46 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[137: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (47 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.onlyParams(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.7.0
+
+</body>
+</html>
